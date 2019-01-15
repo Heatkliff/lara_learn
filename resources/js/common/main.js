@@ -60,7 +60,7 @@ $('.trash-page-link').on('click',function () {
             'body' : $('.content-edit-page textarea').val(),
             'author_id' : $('#author_page').val(),
             'open' : 1,
-            'categories_id': '["2","1"]',
+            'categories_id': 'test'
         },
         success: function(result){
             window.location.replace(link_domain + "/admin/pages");

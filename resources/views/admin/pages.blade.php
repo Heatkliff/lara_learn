@@ -3,7 +3,13 @@
 @section('title', 'AdminLTE')
 
 @section('content_header')
-    <h1>Pages</h1>
+    <h1 class="header-title-block">Pages</h1>
+
+    <div class="add-page-button">
+        <a href="/admin/new/page">
+            Add New
+        </a>
+    </div>
 @stop
 
 @section('content')

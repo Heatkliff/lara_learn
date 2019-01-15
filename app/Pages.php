@@ -13,7 +13,7 @@ class Pages extends Model
      * @var array
      */
     protected $fillable = [
-        'title', 'body', 'author_id', 'open',
+        'title', 'body', 'author_id', 'open', 'categories_id'
     ];
 
     public static function allpages(){

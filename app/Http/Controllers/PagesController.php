@@ -21,6 +21,11 @@ class PagesController extends Controller
         dd($pages);
     }
 
+    public function page_from_id($id)
+    {
+        
+    }
+
     public function admin_edit_pages()
     {
         $data = Pages::allpages();

@@ -34,7 +34,7 @@ Route::get('/author-pages/{id}','PagesController@page_from_author');
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::group(['middleware' => 'RollCheck', 'prefix'=>'admin','as'=>'admin.'], function(){
+Route::group(['prefix'=>'admin','as'=>'admin.'], function(){
     Route::get('/', 'AdminController@index');
     Route::get('pages', 'AdminController@getPages');
     Route::get('users', 'AdminController@getUsers');
