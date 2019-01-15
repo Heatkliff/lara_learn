@@ -17,6 +17,7 @@
                 <th>Created</th>
                 <th>Author</th>
                 <th></th>
+                <th></th>
             </tr>
             </thead>
             <tbody>
@@ -29,6 +30,7 @@
                     <td>{!! $page->created_at !!}</td>
                     <td>{!! $users[$page->author_id-1]->name !!}</td>
                     <td><a href="/admin/edit/page-{{$page->id}}">Edit</a></td>
+                    <td><a class="delete-page-admins" id="{!! $page->id !!}" href="#">Delete</a></td>
                 </tr>
             @endforeach
             </tbody>

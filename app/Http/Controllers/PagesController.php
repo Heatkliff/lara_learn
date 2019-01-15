@@ -12,8 +12,7 @@ class PagesController extends Controller
     public function allpages()
     {
         $data = Pages::allpages();
-//        dd($pages);
-        return view('pages',['pages' => $data]);
+        return view('pages', ['pages' => $data]);
     }
 
     public function page_from_author($id)
@@ -25,9 +24,26 @@ class PagesController extends Controller
     public function admin_edit_pages()
     {
         $data = Pages::allpages();
-//        dd($pages);
-        return view('admin.pages',['pages' => $data]);
+        return view('admin.pages', ['pages' => $data]);
     }
 
+    public function ajaxCreatePage(Request $request)
+    {
+        $page_new = Pages::create($request->all());
+        echo true;
+    }
 
+    public function ajaxUpdatePage(Request $request)
+    {
+        $page = $request->all();
+        $page_update = Pages::where('id', $request->all()['id'])->update($page);
+        echo true;
+    }
+
+    public function ajaxDeletePage(Request $request)
+    {
+        $page = $request->all();
+        $page_delete = Pages::where('id', $request->all()['id'])->delete();
+        echo true;
+    }
 }

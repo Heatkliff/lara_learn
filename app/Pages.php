@@ -6,6 +6,16 @@ use Illuminate\Database\Eloquent\Model;
 
 class Pages extends Model
 {
+
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = [
+        'title', 'body', 'author_id', 'open',
+    ];
+
     public static function allpages(){
         return static::where('id','!=','0')->get();
     }

@@ -58,6 +58,12 @@
                         </span>
                     @endif
                 </div>
+                <div class="form-group has-feedback {{ $errors->has('password_confirmation') ? 'has-error' : '' }}">
+                    <select name="group" id="">
+                        <option value="3">Reader</option>
+                        <option value="2">Blogger</option>
+                    </select>
+                </div>
                 <button type="submit"
                         class="btn btn-primary btn-block btn-flat"
                 >{{ trans('adminlte::adminlte.register') }}</button>

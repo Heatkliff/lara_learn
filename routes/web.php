@@ -34,11 +34,16 @@ Route::get('/author-pages/{id}','PagesController@page_from_author');
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::group(['prefix'=>'admin','as'=>'admin.'], function(){
+Route::group(['middleware' => 'RollCheck', 'prefix'=>'admin','as'=>'admin.'], function(){
     Route::get('/', 'AdminController@index');
     Route::get('pages', 'AdminController@getPages');
     Route::get('users', 'AdminController@getUsers');
     Route::get('/edit/page-{id}', 'AdminController@editPages');
+    Route::get('/new/page', 'AdminController@newPages');
 });
+
+Route::post('/ajax-create-page', 'PagesController@ajaxCreatePage');
+Route::post('/ajax-update-page', 'PagesController@ajaxUpdatePage');
+Route::post('/ajax-delete-page', 'PagesController@ajaxDeletePage');
 
 Auth::routes();

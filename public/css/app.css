@@ -2,3 +2,107 @@
   margin: 5px;
 }
 
+.header-title-block {
+  display: inline-block;
+}
+
+.add-page-button {
+  display: inline-block;
+  border: 1px solid #7f7f7f;
+  padding: 5px;
+}
+
+.add-page-button:hover {
+  border: 1px solid #177BBC;
+  background-color: #09A0CD;
+}
+
+.add-page-button:hover a {
+  color: #ffffff;
+}
+
+.add-page-button a {
+  text-decoration: none;
+  font-weight: 700;
+  color: #177BBC;
+}
+
+.edit-page-content {
+  display: flex;
+}
+
+.edit-page-content .block-edit-page {
+  width: 75%;
+}
+
+.edit-page-content .block-edit-page .title-edit-page {
+  width: 98%;
+  margin-right: 2%;
+  margin-bottom: 15px;
+}
+
+.edit-page-content .block-edit-page .title-edit-page input {
+  width: 100%;
+  height: 35px;
+  font-size: 25px;
+  padding: 3px 8px;
+}
+
+.edit-page-content .block-edit-page .content-edit-page {
+  width: 98%;
+  margin-right: 2%;
+  margin-bottom: 15px;
+}
+
+.edit-page-content .block-edit-page .content-edit-page textarea {
+  resize: none;
+  width: 100%;
+  height: 500px;
+  font-size: 25px;
+  padding: 3px 8px;
+}
+
+.edit-page-content .publish-block {
+  background-color: #ffffff;
+  width: 25%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  border: 1px solid #7f7f7f;
+}
+
+.edit-page-content .publish-block .title-publish-block {
+  margin-top: 5px;
+  padding: 0 10px;
+}
+
+.edit-page-content .publish-block .line-publish-block {
+  padding: 0 10px;
+}
+
+.edit-page-content .publish-block .update-block {
+  margin-top: 15px;
+  padding: 15px 10px;
+  background-color: #F5F5F5;
+  display: flex;
+  border-top: 1px solid #7f7f7f;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.edit-page-content .publish-block .update-block .trash-page-link {
+  color: red;
+}
+
+.edit-page-content .publish-block .update-block .button-update-page {
+  padding: 5px;
+  border: 1px solid #177BBC;
+  border-radius: 5px;
+  background-color: #09A0CD;
+}
+
+.edit-page-content .publish-block .update-block .button-update-page a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
